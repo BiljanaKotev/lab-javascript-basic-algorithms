@@ -97,7 +97,8 @@ console.log(etCounter)
 
 
 // Bonus 2 
-const phraseToCheck = "race car"
+const phrase = "race car"
+const phraseToCheck = phrase.replace(/[\s,]/g, '')
 
 // going through the phrase in reverse
 
@@ -115,21 +116,8 @@ for (let i = phraseToCheck.length - 1; i >= 0; i--) {
   reverseString += character
 }
 
-// checking the individual letters in the two variables reverseString and phraseToCheck
-let isPalindrome = true
-for (let letterIndex=0; letterIndex < phraseToCheck.length; letterIndex++){
-  if(phraseToCheck[letterIndex] === ' ' && phraseToCheck[letterIndex+1] ===  reverseString[letterIndex] ){
-    continue
-  }
-  if (phraseToCheck[letterIndex] !== reverseString[letterIndex]){
-    isPalindrome = false;
-    break
-  }
-}
-
-
 //conditionals to check if the original string was a palindrome
-if (isPalindrome){
+if (phraseToCheck.toLowerCase() === reverseString.toLowerCase()){
   console.log(`"${phraseToCheck}" is a palindrome (True)`)
 }else {
   console.log(`"${phraseToCheck}" is not a palindrome (False)`)
