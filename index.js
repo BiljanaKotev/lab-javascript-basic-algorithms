@@ -76,7 +76,7 @@ console.log(longText.split(" ").length);
 
 // trial 2
 for (let i = 0; i < longText.length; i ++){
-  if (longText[i] !== ',' && longText[i+1] !== ' '){
+  if (longText[i] !== ',' || longText[i] !== ' '){
     wordCounter += 1
   }
 }
@@ -97,4 +97,42 @@ console.log(etCounter)
 
 
 // Bonus 2 
+const phraseToCheck = "race car"
+
+// going through the phrase in reverse
+
+
+// start with an empty string 
+// go through the string in reverse 
+// build the reverse string 
+// at the end loop, we reverse, we can check if the two are the same 
+// if same, then it's a palindrome, if not false
+
+// creates the reverse string from the phrase to check
+let reverseString = ''
+for (let i = phraseToCheck.length - 1; i >= 0; i--) {
+  const character = phraseToCheck[i]
+  reverseString += character
+}
+
+// checking the individual letters in the two variables reverseString and phraseToCheck
+let isPalindrome = true
+for (let letterIndex=0; letterIndex < phraseToCheck.length; letterIndex++){
+  if(phraseToCheck[letterIndex] === ' ' && phraseToCheck[letterIndex+1] ===  reverseString[letterIndex] ){
+    continue
+  }
+  if (phraseToCheck[letterIndex] !== reverseString[letterIndex]){
+    isPalindrome = false;
+    break
+  }
+}
+
+
+//conditionals to check if the original string was a palindrome
+if (isPalindrome){
+  console.log(`"${phraseToCheck}" is a palindrome (True)`)
+}else {
+  console.log(`"${phraseToCheck}" is not a palindrome (False)`)
+}
+
 
