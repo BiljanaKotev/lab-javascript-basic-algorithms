@@ -24,18 +24,23 @@ if (driver > navigator) {
 
 // Iteration 3: Loops
 
+// 3.1
 hacker1 = hacker1.toUpperCase().split("").join(" ");
+
+console.log(hacker1.toUpperCase().split("").join(" "));
 
 for (let i = 0; i < hacker1.length; i++) {
   console.log(hacker1[i]);
 }
 
+// 3.2
 for (let i = hacker2.length - 1; i > 0; i--) {
   console.log(hacker2[i]);
 }
 
+// 3.3
 hacker1 = "Biljana";
-hacker2 = "Joeseph";
+hacker2 = "Joseph";
 
 let newHackerVariable = hacker1.localeCompare(hacker2);
 
