@@ -93,3 +93,28 @@ for (let i = 0; i < longText.length; i++) {
 console.log(etCounter);
 
 // Bonus 2
+const phrase = "race car"
+const phraseToCheck = phrase.replace(/[\s,]/g, '')
+
+// going through the phrase in reverse
+
+
+// start with an empty string 
+// go through the string in reverse 
+// build the reverse string 
+// at the end loop, we reverse, we can check if the two are the same 
+// if same, then it's a palindrome, if not false
+
+// creates the reverse string from the phrase to check
+let reverseString = ''
+for (let i = phraseToCheck.length - 1; i >= 0; i--) {
+  const character = phraseToCheck[i]
+  reverseString += character
+}
+
+//conditionals to check if the original string was a palindrome
+if (phraseToCheck.toLowerCase() === reverseString.toLowerCase()){
+  console.log(`"${phraseToCheck}" is a palindrome (True)`)
+}else {
+  console.log(`"${phraseToCheck}" is not a palindrome (False)`)
+}
