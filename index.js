@@ -94,10 +94,7 @@ console.log(etCounter);
 
 // Bonus 2
 const phrase = "race car"
-const phraseToCheck = phrase.replace(/[\s,]/g, '')
-
-// going through the phrase in reverse
-
+const phraseToCheck = phrase.replace(/[\s,]/g, '') // remove comma and spaces using regex
 
 // start with an empty string 
 // go through the string in reverse 
